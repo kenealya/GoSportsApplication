@@ -1,0 +1,18 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cricket of data">
+                <td>{{cricket.gameName}}</td>
+                <td>
+                    <button class="common-btn btn" (click)="cricketGame()">Go</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
