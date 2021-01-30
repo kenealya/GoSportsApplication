@@ -11,6 +11,8 @@ import { DatePipe } from '@angular/common'
 
 export class CricketComponent implements OnInit {
     currentDate: string;
+    invalidDetails: boolean = true;
+
     constructor(private http: HttpClient, public datepipe: DatePipe) { }
     cricketDetails: ICricketDetails;
 
@@ -19,6 +21,10 @@ export class CricketComponent implements OnInit {
     //Assign the current Date as a string object, the user shouldn't be able to alter this
     ngOnInit() {
         this.currentDate = new Date().toLocaleDateString();
+    }
+
+    ngOnChanges() {
+
     }
 
     //Mock up of method to POST the user data to the backend

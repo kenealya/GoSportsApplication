@@ -1,17 +1,24 @@
 ﻿<div>
     <h1>Cricket Input</h1>
 
+    <label id="playerName">Player Name</label>
     <input type="text" class="playerName" ng-model="{{cricketDetails.playerName}}" />
     <br />
 
+    <label id="game">Current Game</label>
     <input type="text" class="game" ng-model="{{cricketDetails.game}}" />
     <br />
 
+    <label id="date">Today's Date</label>
     <label title="date">{{currentDate}}</label>
     <br />
 
+    <label id="innings">Innings</label>
     <input type="text" class="innings" ng-model="{{cricketDetails.innings}}" />
     <br />
 
+    <label id="user">Current User</label>
     <input type="text" class="user" ng-model="{{cricketDetails.user}}" />
+
+    <button (click)="saveDetails()" [disabled]="{{invalidDetails}}">Save</button>
 </div>
